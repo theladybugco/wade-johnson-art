@@ -16,6 +16,8 @@ nav a{text-decoration:none;color:#e8d2a2}nav a:hover,nav a[aria-current]{color:w
 .intro{padding-top:65px;padding-bottom:38px}.eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;letter-spacing:.24em}h1{font-size:clamp(38px,5.2vw,64px);font-weight:normal;line-height:1.13;margin:13px 0 16px}
 .intro p{max-width:780px;color:#d2c8b8;font-size:17px;margin:0}.ornament{color:var(--gold);letter-spacing:.3em;margin-top:22px}
 .gallery{background:var(--panel);padding:38px 0 78px;border-top:1px solid #50452f}
+.filters{display:flex;justify-content:center;gap:12px 28px;flex-wrap:wrap;margin-bottom:35px;padding:0 0 22px;border-bottom:1px solid #544b35}.filter-btn{border:0;border-bottom:2px solid transparent;background:transparent;color:var(--parchment);font:inherit;text-transform:uppercase;font-size:12px;letter-spacing:.045em;padding:10px 3px;cursor:pointer}.filter-btn:hover,.filter-btn:focus-visible{color:var(--gold)}.filter-btn[aria-pressed="true"]{color:var(--gold);border-bottom-color:var(--gold)}.art-card[hidden]{display:none}.filter-empty{text-align:center;padding:42px 10px;color:var(--muted)}
+
 .art-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .art-card{display:block;width:100%;padding:9px;margin:0;text-align:left;background:var(--card);border:1px solid #63563a;color:inherit;cursor:pointer;text-decoration:none;transition:border-color .15s}
 .art-card:hover{border-color:var(--gold)}.image-box{height:340px;display:flex;align-items:center;justify-content:center;background:#0b0e12;position:relative;overflow:hidden}.image-box img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}.image-box img[hidden]{display:none}.waiting-note{display:none;text-align:center;color:#b6a17b;font-size:11px;letter-spacing:.15em;padding:20px}.image-box.waiting .waiting-note{display:block}
@@ -31,123 +33,144 @@ footer{padding:32px 0 55px;text-align:center;color:#bdb19c;border-top:1px solid 
 <header><div class="shell"><a class="brand" href="index.html" aria-label="Wade Johnson Art home"><img src="images/logo.jpg" alt="Wade Johnson Art original illuminated manuscript logo"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="gallery.html" aria-current="page">Gallery</a><a href="index.html#process">Process</a><a href="index.html#prints">Prints</a><a href="index.html#commissions">Commissions</a><a href="index.html#connect">Connect</a></nav></div></header>
 <main>
 <section class="intro shell"><div class="eyebrow">ORIGINAL ARTWORK BY WADE JOHNSON</div><h1>The Art Gallery</h1><p>A collection of Wade's original digital illustrations, from characters and imagined worlds to paintings inspired by literature, film, gaming, and folklore. Select an artwork to explore it in more detail.</p><div class="ornament" aria-hidden="true">— ✦ —</div></section>
-<section class="gallery" aria-label="Artwork collection"><div class="shell"><div class="art-grid"><a class="art-card" href="artwork.html?id=0" aria-label="View HELM'S DEEP and artwork details">
+<section class="gallery" aria-label="Artwork collection"><div class="shell"><div class="filters" role="group" aria-label="Filter artwork by subject">
+<button class="filter-btn" type="button" data-filter="all" aria-pressed="true">ALL</button>
+<button class="filter-btn" type="button" data-filter="illustrations" aria-pressed="false">ILLUSTRATIONS</button>
+<button class="filter-btn" type="button" data-filter="character-portraits" aria-pressed="false">CHARACTER PORTRAITS</button>
+<button class="filter-btn" type="button" data-filter="middle-earth" aria-pressed="false">MIDDLE-EARTH</button>
+<button class="filter-btn" type="button" data-filter="witcher" aria-pressed="false">THE WITCHER</button>
+<button class="filter-btn" type="button" data-filter="ice-and-fire" aria-pressed="false">A SONG OF ICE AND FIRE</button>
+</div><div class="art-grid"><a class="art-card" data-categories="illustrations middle-earth" href="artwork.html?id=0" aria-label="View HELM'S DEEP and artwork details">
   <span class="image-box"><img src="images/aragorns-return.jpg" alt="HELM'S DEEP, original digital artwork by Wade Johnson" loading="eager" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">HELM'S DEEP</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=1" aria-label="View THE CITY OF GWYNNCRAIG and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=1" aria-label="View THE CITY OF GWYNNCRAIG and artwork details">
   <span class="image-box"><img src="images/gwynncraig.jpg" alt="THE CITY OF GWYNNCRAIG, original digital artwork by Wade Johnson" loading="eager" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">THE CITY OF GWYNNCRAIG</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=2" aria-label="View CADMUS GRAVES and artwork details">
+<a class="art-card" data-categories="character-portraits" href="artwork.html?id=2" aria-label="View CADMUS GRAVES and artwork details">
   <span class="image-box"><img src="images/divination-wizard.png" alt="CADMUS GRAVES, original digital artwork by Wade Johnson" loading="eager" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">CADMUS GRAVES</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=3" aria-label="View THE HEDGE KNIGHT and artwork details">
+<a class="art-card" data-categories="illustrations ice-and-fire" href="artwork.html?id=3" aria-label="View THE HEDGE KNIGHT and artwork details">
   <span class="image-box"><img src="images/hedge-knight.jpg" alt="THE HEDGE KNIGHT, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">THE HEDGE KNIGHT</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=4" aria-label="View PANIC TAX EP and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=4" aria-label="View PANIC TAX EP and artwork details">
   <span class="image-box"><img src="images/panic-tax.jpg" alt="PANIC TAX EP, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">PANIC TAX EP</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=5" aria-label="View MISTBORN and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=5" aria-label="View MISTBORN and artwork details">
   <span class="image-box"><img src="images/mistborn.png" alt="MISTBORN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">MISTBORN</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=6" aria-label="View THE ROCKY ROAD TO DUBLIN and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=6" aria-label="View THE ROCKY ROAD TO DUBLIN and artwork details">
   <span class="image-box"><img src="images/rocky-road-to-dublin.png" alt="THE ROCKY ROAD TO DUBLIN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">THE ROCKY ROAD TO DUBLIN</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=7" aria-label="View THE TOWER OF THE SWALLOW and artwork details">
+<a class="art-card" data-categories="illustrations witcher" href="artwork.html?id=7" aria-label="View THE TOWER OF THE SWALLOW and artwork details">
   <span class="image-box"><img src="images/Tower of the Swallow.png" alt="THE TOWER OF THE SWALLOW, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">THE TOWER OF THE SWALLOW</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=8" aria-label="View DAY SHALL COME AGAIN and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=8" aria-label="View DAY SHALL COME AGAIN and artwork details">
   <span class="image-box"><img src="images/Day Shall Come Again.png" alt="DAY SHALL COME AGAIN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">DAY SHALL COME AGAIN</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=9" aria-label="View EDWARD KENWAY and artwork details">
+<a class="art-card" data-categories="character-portraits" href="artwork.html?id=9" aria-label="View EDWARD KENWAY and artwork details">
   <span class="image-box"><img src="images/Edward Kenway.png" alt="EDWARD KENWAY, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">EDWARD KENWAY</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=10" aria-label="View FJORD DECISION and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=10" aria-label="View FJORD DECISION and artwork details">
   <span class="image-box"><img src="images/Fjord Decision.png" alt="FJORD DECISION, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">FJORD DECISION</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=11" aria-label="View HAIL MARY — INFRARED VISION and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=11" aria-label="View HAIL MARY — INFRARED VISION and artwork details">
   <span class="image-box"><img src="images/Hail Mary Infrared Vission.png" alt="HAIL MARY — INFRARED VISION, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">HAIL MARY — INFRARED VISION</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=12" aria-label="View HAIL MARY — REGULAR VISION and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=12" aria-label="View HAIL MARY — REGULAR VISION and artwork details">
   <span class="image-box"><img src="images/Hail Mary Regular Vision.png" alt="HAIL MARY — REGULAR VISION, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">HAIL MARY — REGULAR VISION</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=13" aria-label="View INSIDE INFORMATION and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=13" aria-label="View INSIDE INFORMATION and artwork details">
   <span class="image-box"><img src="images/Inside information.png" alt="INSIDE INFORMATION, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">INSIDE INFORMATION</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=14" aria-label="View RESIDENT EVIL 2 — FAN POSTER and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=14" aria-label="View RESIDENT EVIL 2 — FAN POSTER and artwork details">
   <span class="image-box"><img src="images/RE Fan Poster.png" alt="RESIDENT EVIL 2 — FAN POSTER, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">RESIDENT EVIL 2 — FAN POSTER</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=15" aria-label="View STORMBLESSED and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=15" aria-label="View STORMBLESSED and artwork details">
   <span class="image-box"><img src="images/Stormblessed.png" alt="STORMBLESSED, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">STORMBLESSED</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=16" aria-label="View DRACULA and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=16" aria-label="View DRACULA and artwork details">
   <span class="image-box"><img src="images/wade-johnson-dracula.jpg" alt="DRACULA, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">DRACULA</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=17" aria-label="View RIDDLES IN THE DARK and artwork details">
+<a class="art-card" data-categories="illustrations middle-earth" href="artwork.html?id=17" aria-label="View RIDDLES IN THE DARK and artwork details">
   <span class="image-box"><img src="images/wade-johnson-riddles-in-the-dark.jpg" alt="RIDDLES IN THE DARK, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">RIDDLES IN THE DARK</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=18" aria-label="View DON'T MOVE and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=18" aria-label="View DON'T MOVE and artwork details">
   <span class="image-box"><img src="images/Don't Move.png" alt="DON'T MOVE, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">DON'T MOVE</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=19" aria-label="View DUNK AND EGG and artwork details">
+<a class="art-card" data-categories="illustrations ice-and-fire" href="artwork.html?id=19" aria-label="View DUNK AND EGG and artwork details">
   <span class="image-box"><img src="images/Dunk and Egg.png" alt="DUNK AND EGG, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">DUNK AND EGG</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=20" aria-label="View CIRI AND LITTLE HORSE and artwork details">
+<a class="art-card" data-categories="illustrations witcher" href="artwork.html?id=20" aria-label="View CIRI AND LITTLE HORSE and artwork details">
   <span class="image-box"><img src="images/Ciri and Little Horse.png" alt="CIRI AND LITTLE HORSE, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">CIRI AND LITTLE HORSE</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=21" aria-label="View FOG ON THE BARROWS-DOWNS and artwork details">
+<a class="art-card" data-categories="illustrations middle-earth" href="artwork.html?id=21" aria-label="View FOG ON THE BARROWS-DOWNS and artwork details">
   <span class="image-box"><img src="images/Fog On the Barrows-downs.png" alt="FOG ON THE BARROWS-DOWNS, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">FOG ON THE BARROWS-DOWNS</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=22" aria-label="View FRANKENSTEIN and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=22" aria-label="View FRANKENSTEIN and artwork details">
   <span class="image-box"><img src="images/Frankenstein.jpg" alt="FRANKENSTEIN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">FRANKENSTEIN</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=23" aria-label="View LOOK UP and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=23" aria-label="View LOOK UP and artwork details">
   <span class="image-box"><img src="images/Look Up.jpeg" alt="LOOK UP, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">LOOK UP</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=24" aria-label="View THE WILL-O-THE-WISPS and artwork details">
+<a class="art-card" data-categories="illustrations" href="artwork.html?id=24" aria-label="View THE WILL-O-THE-WISPS and artwork details">
   <span class="image-box"><img src="images/The Will-o-the-Wisps.jpeg" alt="THE WILL-O-THE-WISPS, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">THE WILL-O-THE-WISPS</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=25" aria-label="View DAREDEVIL — ROOFTOP and artwork details">
+<a class="art-card" data-categories="character-portraits" href="artwork.html?id=25" aria-label="View DAREDEVIL — ROOFTOP and artwork details">
   <span class="image-box"><img src="images/Dare Devil 2.jpg" alt="DAREDEVIL — ROOFTOP, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">DAREDEVIL — ROOFTOP</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=26" aria-label="View DAREDEVIL — PORTRAIT and artwork details">
+<a class="art-card" data-categories="character-portraits" href="artwork.html?id=26" aria-label="View DAREDEVIL — PORTRAIT and artwork details">
   <span class="image-box"><img src="images/Dare Devil.jpg" alt="DAREDEVIL — PORTRAIT, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">DAREDEVIL — PORTRAIT</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=27" aria-label="View SUPERMAN and artwork details">
+<a class="art-card" data-categories="character-portraits" href="artwork.html?id=27" aria-label="View SUPERMAN and artwork details">
   <span class="image-box"><img src="images/Superman.png" alt="SUPERMAN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">SUPERMAN</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a>
-<a class="art-card" href="artwork.html?id=28" aria-label="View MAJOR and artwork details">
+<a class="art-card" data-categories="character-portraits" href="artwork.html?id=28" aria-label="View MAJOR and artwork details">
   <span class="image-box"><img src="images/Major.png" alt="MAJOR, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
   <span class="art-info"><span class="art-title">MAJOR</span><span class="art-action">VIEW ARTWORK ↗</span></span>
 </a></div><div class="gallery-end"><a href="index.html">← RETURN TO HOME</a></div></div></section>
 </main>
 <footer class="shell"><div>Connect with Wade · <a href="index.html#connect">Social &amp; shop links</a></div><small>Artwork © Wade Johnson. All rights reserved.</small></footer>
 
-</body></html>
+<script>
+const buttons=[...document.querySelectorAll('.filter-btn')];
+const cards=[...document.querySelectorAll('.art-card')];
+const valid=new Set(buttons.map(btn=>btn.dataset.filter));
+function applyFilter(selected){
+ const filter=valid.has(selected)?selected:'all';
+ buttons.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===filter)));
+ cards.forEach(card=>{card.hidden=filter!=='all'&&!card.dataset.categories.split(' ').includes(filter)});
+ const url=new URL(location.href);
+ if(filter==='all')url.searchParams.delete('category');else url.searchParams.set('category',filter);
+ history.replaceState(null,'',url);
+}
+buttons.forEach(btn=>btn.addEventListener('click',()=>applyFilter(btn.dataset.filter)));
+applyFilter(new URLSearchParams(location.search).get('category')||'all');
+</script></body></html>
