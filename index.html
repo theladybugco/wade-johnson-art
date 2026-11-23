@@ -27,6 +27,8 @@
     .gallery-link{text-align:center;margin-top:24px}.gallery-link a{display:inline-block;color:var(--gold);text-decoration:none;font-size:13px;font-weight:bold;letter-spacing:.05em;text-transform:uppercase}.gallery-link a:hover{text-decoration:underline;text-underline-offset:5px}
     .pets{padding:62px 0 70px;background:#1c2026;border-top:1px solid #6f5b36}.pets h2{font-size:clamp(29px,3vw,42px);font-weight:normal;margin:8px 0 12px}.pets-intro{color:#d2c8b8;max-width:760px;margin:0 0 28px;font-size:16px}.pet-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.pet-card{background:#13171c;border:1px solid #63563a;padding:10px;margin:0}.pet-card img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;background:#0c1015}.pet-card figcaption{padding:12px 8px 7px;color:#eadbbd;font-size:18px;letter-spacing:.05em}.pet-link{text-align:center;margin-top:28px}.pet-link a{color:var(--gold);font-size:13px;font-weight:bold;letter-spacing:.05em;text-decoration:none}.pet-link a:hover{text-decoration:underline;text-underline-offset:5px}
     @media(max-width:520px){.pet-grid{grid-template-columns:1fr}}
+    .process{padding:64px 0 72px;background:#1c2026;border-top:1px solid #6f5b36}.process h2{font-size:clamp(29px,3vw,42px);font-weight:normal;margin:8px 0 12px}.process p{color:#d2c8b8;max-width:810px;font-size:16px;margin:0 0 28px}.process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.process-card{background:#13171c;border:1px solid #63563a;padding:9px;margin:0}.process-card img{display:block;width:100%;height:auto;aspect-ratio:1.54;object-fit:contain;background:#0c1015}.process-card figcaption{padding:13px 8px 7px;color:#eadbbd;font-size:16px}.process-link{text-align:center;margin-top:26px}.process-link a{color:var(--gold);font-size:13px;font-weight:bold;letter-spacing:.05em;text-decoration:none}.process-link a:hover{text-decoration:underline;text-underline-offset:5px}
+    @media(max-width:800px){.process-grid{grid-template-columns:1fr}}
     .cta-wrap{padding:72px 0}.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.cta{background:#ede0bd;color:#38251a;padding:30px;border:7px solid #233f6b;outline:2px solid #c8a659;outline-offset:-13px;min-height:210px}.cta:nth-child(2){border-color:#662c36}.cta h3{font-weight:normal;font-size:34px;margin:0 0 13px}.cta p{font-size:16px;max-width:370px}.cta a{font-weight:bold;text-underline-offset:5px}
     footer{padding:35px 0 60px;border-top:1px solid #50452f;text-align:center;color:#bdb19c}footer a{color:#ebd8ae;margin:0 10px}footer small{display:block;margin-top:18px}
     @media(max-width:800px){.intro{grid-template-columns:1fr;padding-top:36px;gap:25px}.art-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cta-grid{grid-template-columns:1fr}.section-head{display:block}}
@@ -38,7 +40,7 @@
     <div class="shell">
       <a class="brand" href="#home" aria-label="Wade Johnson Art home"><img src="images/logo.jpg" alt="Wade Johnson Art original illuminated manuscript logo with blue and gold W"></a>
       <nav aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#gallery">Gallery</a><a href="#prints">Prints</a><a href="#commissions">Commissions</a><a href="#connect">Connect</a>
+        <a href="#home">Home</a><a href="#gallery">Gallery</a><a href="#process">Process</a><a href="#prints">Prints</a><a href="#commissions">Commissions</a><a href="#connect">Connect</a>
       </nav>
     </div>
   </header>
@@ -74,6 +76,19 @@
           <figure class="pet-card"><img loading="lazy" src="images/Ciri.jpg" alt="CIRI, original digital pet portrait of a cream and white dog by Wade Johnson"><figcaption>CIRI</figcaption></figure>
         </div>
         <div class="pet-link"><a href="#commissions">EXPLORE PET PORTRAIT STYLES →</a></div>
+      </div>
+    </section>
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="eyebrow">Behind the artwork</div>
+        <h2 id="process-title">The Creative Process</h2>
+        <p>Discover how Wade develops his illustrations, from the initial drawing through shading and lighting to the finished artwork.</p>
+        <div class="process-grid">
+          <figure class="process-card"><img loading="lazy" src="images/Aragorn Return Process 1.jpg" alt="Original line drawing for Aragorn's Return showing the hall's architectural perspective"><figcaption>01 · INITIAL DRAWING</figcaption></figure>
+          <figure class="process-card"><img loading="lazy" src="images/Aragorn Return Process 2.png" alt="Wade's grayscale shading and values study for Aragorn's Return"><figcaption>02 · SHADING &amp; VALUES</figcaption></figure>
+          <figure class="process-card"><img loading="lazy" src="images/aragorns-return.jpg" alt="Wade's completed full-color painting Aragorn's Return"><figcaption>03 · FINISHED ARTWORK</figcaption></figure>
+        </div>
+        <div class="process-link"><a href="process.html">EXPLORE THE CREATIVE PROCESS →</a></div>
       </div>
     </section>
     <section class="cta-wrap shell" aria-label="Shop and commission information"><div class="cta-grid">
