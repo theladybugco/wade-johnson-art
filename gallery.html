@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore original digital paintings, illustrated worlds, characters, and story-inspired artwork by Wade Johnson.">
+<title>Art Gallery | Wade Johnson Art</title>
+<style>
+:root{--ink:#14161a;--panel:#1c2026;--card:#13171c;--edge:#78653f;--gold:#ddbd77;--parchment:#f1e4c7;--muted:#c0b6a4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--parchment);font-family:Georgia,'Times New Roman',serif;line-height:1.55}a{color:inherit}
+button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #f8db91;outline-offset:4px}
+.shell{max-width:1190px;margin:auto;padding:0 22px}
+header{background:#0f1115;padding:20px 0 0}.brand{display:block;max-width:1050px;margin:auto}.brand img{display:block;width:100%;height:auto;border:1px solid #a88d57}
+nav{display:flex;justify-content:center;gap:clamp(12px,3vw,42px);flex-wrap:wrap;padding:21px 10px 19px;border-bottom:1px solid #544b35;text-transform:uppercase;letter-spacing:.14em;font-size:12px}
+nav a{text-decoration:none;color:#e8d2a2}nav a:hover,nav a[aria-current]{color:white;text-decoration:underline;text-underline-offset:6px}
+.intro{padding-top:65px;padding-bottom:38px}.eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;letter-spacing:.24em}h1{font-size:clamp(38px,5.2vw,64px);font-weight:normal;line-height:1.13;margin:13px 0 16px}
+.intro p{max-width:780px;color:#d2c8b8;font-size:17px;margin:0}.ornament{color:var(--gold);letter-spacing:.3em;margin-top:22px}
+.gallery{background:var(--panel);padding:38px 0 78px;border-top:1px solid #50452f}
+.art-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.art-card{display:block;width:100%;padding:9px;margin:0;text-align:left;background:var(--card);border:1px solid #63563a;color:inherit;cursor:pointer;transition:border-color .15s}
+.art-card:hover{border-color:var(--gold)}.image-box{height:340px;display:flex;align-items:center;justify-content:center;background:#0b0e12;position:relative;overflow:hidden}.image-box img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}.image-box img[hidden]{display:none}.waiting-note{display:none;text-align:center;color:#b6a17b;font-size:11px;letter-spacing:.15em;padding:20px}.image-box.waiting .waiting-note{display:block}
+.art-info{display:block;padding:14px 8px 8px;min-height:88px}.art-category{display:block;color:#f1e4c7;font-size:17px}.art-title{display:block;color:#c3ad85;font-size:12px;letter-spacing:.095em;text-transform:uppercase;margin-top:4px}
+.gallery-end{border-top:1px solid #685639;margin-top:36px;padding-top:25px;text-align:center}.gallery-end a{color:var(--gold);font-size:13px;text-decoration:none;font-weight:bold;letter-spacing:.06em}
+footer{padding:32px 0 55px;text-align:center;color:#bdb19c;border-top:1px solid #50452f}footer a{color:#ebd8ae}
+.lightbox{border:1px solid #8f773f;background:#171a20;color:var(--parchment);width:min(96vw,1040px);max-height:94vh;padding:18px;box-shadow:0 24px 70px #000}.lightbox::backdrop{background:rgba(0,0,0,.88)}.lightbox-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}.lightbox h2{font-size:24px;font-weight:normal;margin:0}.close{background:none;border:1px solid var(--edge);color:var(--parchment);padding:7px 13px;cursor:pointer}.full-image{max-height:65vh;display:block;max-width:100%;width:auto;height:auto;object-fit:contain;margin:0 auto}.lightbox-note{text-align:center;color:#c8bca8;margin:15px auto 4px;max-width:680px;font-size:14px}.lightbox-type{color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-size:11px;text-align:center}.lightbox-fallback{text-align:center;color:#ddbd77;padding:70px 10px}
+@media(max-width:800px){.art-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.image-box{height:300px}}
+@media(max-width:520px){header{padding-top:10px}.shell{padding:0 14px}nav{font-size:11px;gap:14px;padding:16px 8px}.art-grid{grid-template-columns:1fr}.image-box{height:390px}.intro{padding-top:39px}.lightbox{padding:12px}.lightbox h2{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="shell"><a class="brand" href="index.html" aria-label="Wade Johnson Art home"><img src="images/logo.jpg" alt="Wade Johnson Art original illuminated manuscript logo"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="gallery.html" aria-current="page">Gallery</a><a href="index.html#process">Process</a><a href="index.html#prints">Prints</a><a href="index.html#commissions">Commissions</a><a href="index.html#connect">Connect</a></nav></div></header>
+<main>
+<section class="intro shell"><div class="eyebrow">ORIGINAL ARTWORK BY WADE JOHNSON</div><h1>The Art Gallery</h1><p>A collection of Wade's original digital illustrations, from characters and imagined worlds to paintings inspired by literature, film, gaming, and folklore. Select an artwork to view it larger.</p><div class="ornament" aria-hidden="true">— ✦ —</div></section>
+<section class="gallery" aria-label="Artwork collection"><div class="shell"><div class="art-grid"><button class="art-card" type="button" data-index="0" aria-label="View HELM'S DEEP in full">
+  <span class="image-box"><img src="images/aragorns-return.jpg" alt="HELM'S DEEP, original digital artwork by Wade Johnson" loading="eager" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Narrative Paintings</span><span class="art-title">HELM'S DEEP</span></span>
+</button>
+<button class="art-card" type="button" data-index="1" aria-label="View THE CITY OF GWYNNCRAIG in full">
+  <span class="image-box"><img src="images/gwynncraig.jpg" alt="THE CITY OF GWYNNCRAIG, original digital artwork by Wade Johnson" loading="eager" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Illustrated Worlds</span><span class="art-title">THE CITY OF GWYNNCRAIG</span></span>
+</button>
+<button class="art-card" type="button" data-index="2" aria-label="View CADMUS GRAVES in full">
+  <span class="image-box"><img src="images/divination-wizard.png" alt="CADMUS GRAVES, original digital artwork by Wade Johnson" loading="eager" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Original Characters</span><span class="art-title">CADMUS GRAVES</span></span>
+</button>
+<button class="art-card" type="button" data-index="3" aria-label="View THE HEDGE KNIGHT in full">
+  <span class="image-box"><img src="images/hedge-knight.jpg" alt="THE HEDGE KNIGHT, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Story Illustrations</span><span class="art-title">THE HEDGE KNIGHT</span></span>
+</button>
+<button class="art-card" type="button" data-index="4" aria-label="View PANIC TAX EP in full">
+  <span class="image-box"><img src="images/panic-tax.jpg" alt="PANIC TAX EP, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Cover Artwork</span><span class="art-title">PANIC TAX EP</span></span>
+</button>
+<button class="art-card" type="button" data-index="5" aria-label="View MISTBORN in full">
+  <span class="image-box"><img src="images/mistborn.png" alt="MISTBORN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Atmospheric Scenes</span><span class="art-title">MISTBORN</span></span>
+</button>
+<button class="art-card" type="button" data-index="6" aria-label="View THE ROCKY ROAD TO DUBLIN in full">
+  <span class="image-box"><img src="images/rocky-road-to-dublin.png" alt="THE ROCKY ROAD TO DUBLIN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Narrative Paintings</span><span class="art-title">THE ROCKY ROAD TO DUBLIN</span></span>
+</button>
+<button class="art-card" type="button" data-index="7" aria-label="View THE TOWER OF THE SWALLOW in full">
+  <span class="image-box"><img src="images/Tower of the Swallow.png" alt="THE TOWER OF THE SWALLOW, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Story Illustrations</span><span class="art-title">THE TOWER OF THE SWALLOW</span></span>
+</button>
+<button class="art-card" type="button" data-index="8" aria-label="View DAY SHALL COME AGAIN in full">
+  <span class="image-box"><img src="images/Day Shall Come Again.png" alt="DAY SHALL COME AGAIN, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Story Illustrations</span><span class="art-title">DAY SHALL COME AGAIN</span></span>
+</button>
+<button class="art-card" type="button" data-index="9" aria-label="View EDWARD KENWAY in full">
+  <span class="image-box"><img src="images/Edward Kenway.png" alt="EDWARD KENWAY, original digital artwork by Wade Johnson" loading="lazy" onerror="this.hidden=true;this.parentNode.classList.add('waiting')"><span class="waiting-note">ARTWORK IMAGE AWAITING UPLOAD</span></span>
+  <span class="art-info"><span class="art-category">Characters &amp; Portraits</span><span class="art-title">EDWARD KENWAY</span></span>
+</button></div><div class="gallery-end"><a href="index.html">← RETURN TO HOME</a></div></div></section>
+</main>
+<footer class="shell"><div>Connect with Wade · <a href="index.html#connect">Social &amp; shop links</a></div><small>Artwork © Wade Johnson. All rights reserved.</small></footer>
+<dialog class="lightbox" id="art-dialog" aria-labelledby="lightbox-title"><div class="lightbox-top"><h2 id="lightbox-title"></h2><button type="button" class="close" id="close-dialog" aria-label="Close artwork">CLOSE ×</button></div><div id="full-container"></div><div class="lightbox-type" id="lightbox-type"></div><p class="lightbox-note" id="lightbox-note"></p></dialog>
+<script>
+const artworks=[{"title":"HELM'S DEEP","type":"Narrative Paintings","src":"images/aragorns-return.jpg","note":"Featured on the homepage."},{"title":"THE CITY OF GWYNNCRAIG","type":"Illustrated Worlds","src":"images/gwynncraig.jpg","note":"Fantasy city and mountain environment."},{"title":"CADMUS GRAVES","type":"Original Characters","src":"images/divination-wizard.png","note":"Original character illustration."},{"title":"THE HEDGE KNIGHT","type":"Story Illustrations","src":"images/hedge-knight.jpg","note":"Literature-inspired illustration."},{"title":"PANIC TAX EP","type":"Cover Artwork","src":"images/panic-tax.jpg","note":"Cover artwork for Ethan William Bowers & The Painted Strangers."},{"title":"MISTBORN","type":"Atmospheric Scenes","src":"images/mistborn.png","note":"Story-inspired illustration."},{"title":"THE ROCKY ROAD TO DUBLIN","type":"Narrative Paintings","src":"images/rocky-road-to-dublin.png","note":"Narrative scene."},{"title":"THE TOWER OF THE SWALLOW","type":"Story Illustrations","src":"images/Tower of the Swallow.png","note":"Inspired by The Witcher.","pending":true},{"title":"DAY SHALL COME AGAIN","type":"Story Illustrations","src":"images/Day Shall Come Again.png","note":"Literature-inspired illustration.","pending":true},{"title":"EDWARD KENWAY","type":"Characters & Portraits","src":"images/Edward Kenway.png","note":"Gaming-inspired illustration.","pending":true}];
+const dialog=document.getElementById("art-dialog");const imgContainer=document.getElementById("full-container");
+document.querySelectorAll(".art-card").forEach(card=>card.addEventListener("click",()=>{const w=artworks[Number(card.dataset.index)];document.getElementById("lightbox-title").textContent=w.title;document.getElementById("lightbox-type").textContent=w.type;document.getElementById("lightbox-note").textContent=w.note;imgContainer.replaceChildren();const img=document.createElement("img");img.src=w.src;img.alt=w.title+", original artwork by Wade Johnson";img.className="full-image";img.onerror=()=>{imgContainer.replaceChildren();const message=document.createElement("p");message.className="lightbox-fallback";message.textContent="The original artwork image will appear here once its file is uploaded.";imgContainer.append(message)};imgContainer.append(img);dialog.showModal()}));
+document.getElementById("close-dialog").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});
+</script>
+</body></html>
